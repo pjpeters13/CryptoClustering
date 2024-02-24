@@ -1,6 +1,6 @@
 # CryptoClustering
 
-                                                                   Cryptocurrency Clustering Project
+                                                              Cryptocurrency Clustering Project
 
 
 Overview:
