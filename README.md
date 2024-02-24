@@ -1,35 +1,50 @@
 # CryptoClustering
 
-                                        Cryptocurrency Clustering Project
+                                                                   Cryptocurrency Clustering Project
 
 
-Project Overview:
+Overview:
+ This project employs a range of Python libraries and machine learning techniques to analyze and cluster cryptocurrencies based on their price change percentages over various periods. By examining these changes over time frames such as 24 hours, 7 days, 14 days, 30 days, 60 days, 200 days, and 1 year, we aim to uncover patterns that might help categorize these assets based on their volatility and market behavior.
 
- This project aims to analyze and cluster cryptocurrencies based on their price change percentages over different time frames. By examining the short-term (24h, 7d, 14d), medium-term (30d, 60d), and long-term (200d, 1y) price fluctuations, we aim to identify patterns and categorize cryptocurrencies into distinct clusters. This analysis can help investors understand the volatility and risk associated with each cryptocurrency.
+Data:
+The dataset consists of three cryptocurrencies, denoted as PC1, PC2, and PC3. Each cryptocurrency has been analyzed for its price change percentage across several time frames:
+24 hours
+7 days
+14 days
+30 days
+60 days
+200 days
+1 year
 
-Data Description:
+Methodology:
 
- The dataset comprises three cryptocurrencies, labeled PC1, PC2, and PC3. For each cryptocurrency, we have recorded the percentage change in price over the following time frames:24 hours, 7 days, 14 days, 30 days, 60 days, 200 days, and 1 year.
+The analysis was conducted using Python 3.8.1 and Python libraries and methods:
 
+Data Preparation:
+Pandas: Used for data manipulation and analysis.
+NumPy: Employed for numerical operations.
 
-Results Summary:
+Feature Scaling:
+StandardScaler: Standardized the features by removing the mean and scaling to unit variance, essential for the clustering algorithm's performance.
 
- The analysis of the price change percentages yielded the following insights:
-PC1 exhibited slight volatility in the short term but showed a consistent increase over the medium to long term, suggesting a stable investment over longer periods.
-PC2 showed moderate to significant increases in the short to medium term but displayed a decrease over the past year, indicating potential for short-term gains but uncertainty over the long term.
-PC3 displayed mixed results, with short-term volatility, a decrease in the medium term, and a modest increase over the year, suggesting a higher risk but with potential for gains.
+Dimensionality Reduction:
+PCA (Principal Component Analysis): Reduced the dimensionality of the dataset to simplify the visualization and analysis while retaining the essence of the information.
 
+Clustering:
+KMeans: Applied to cluster the cryptocurrencies based on their scaled and transformed features. The number of clusters was determined based on the dataset's intrinsic properties.
 
-Clustering Analysis:
+Visualization:
+Matplotlib: Created visualizations to illustrate the clustering results and the PCA-reduced feature spaces.
 
- Based on the price change percentages, the cryptocurrencies were clustered into categories reflecting their volatility and performance over time. The clustering algorithm aimed to group the cryptocurrencies with similar performance patterns, providing a basis for comparative analysis and investment strategy development.
+Results:
+The clustering analysis revealed distinct groups among the cryptocurrencies based on their volatility and performance over the analyzed periods. Here is a brief overview:
+PC1 demonstrated relative stability over the longer term, making it potentially more suitable for conservative investment strategies.
+PC2 showed significant short to medium-term gains but with a decrease over the past year, indicating higher volatility and potential for speculative trading.
+PC3 displayed high volatility with notable short-term gains and losses, suggesting a riskier investment.
 
 Conclusion:
+The cryptocurrency clustering project provides valuable insights into the behavior of different cryptocurrencies over time. Through the application of machine learning techniques and data visualization, we have categorized cryptocurrencies into clusters that reflect their market behavior and volatility. This analysis can aid investors in making informed decisions based on their risk tolerance and investment horizon.
 
- The cryptocurrency clustering project provides valuable insights into the performance and volatility of different cryptocurrencies over various time frames. By analyzing price change percentages, investors can make more informed decisions based on the risk and potential return associated with each cryptocurrency.
-
-
-Future Work:
-
- Further analysis could incorporate more cryptocurrencies and additional factors such as trading volume and market capitalization to refine the clustering and provide more detailed insights into the cryptocurrency market dynamics.
-![image](https://github.com/pjpeters13/CryptoClustering/assets/71742689/c228bf2e-81e1-40b5-9c6f-6e93acfb6fa0)
+Future Directions:
+Future work may include the incorporation of more cryptocurrencies into the analysis, the exploration of alternative clustering algorithms, and the inclusion of additional features such as trading volume and market capitalization to enrich the analysis.
+![image](https://github.com/pjpeters13/CryptoClustering/assets/71742689/11f44b81-9ed6-4754-a9f8-983256f61bc3)
